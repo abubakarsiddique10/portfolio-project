@@ -75,6 +75,6 @@ button {
     all: unset;
     cursor: pointer;
 }
-section {
-    margin-bottom: 70px;
+section:not(#hero) {
+    padding-top: 100px;
 }

@@ -1,5 +1,5 @@
 /* common style start */
-.services__header, .price__header, .testimonial__header, .portfolio__header, .blog__header {
+.services__header, .price__header, .testimonial__header, .portfolio__header, .blog__header, .contact__header {
     text-align: center;
     margin-bottom: 50px;
 }
@@ -9,7 +9,7 @@
     font-weight: 700;
     line-height: 39.552px;
     text-transform: capitalize;
-    margin-bottom: 25px;
+    padding-bottom: 25px;
 }
 .header__description {
     width: 440px;
@@ -25,6 +25,9 @@
 /* nav style start */
 #header {
     background: var(--White, #FFFFFF);
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 .nav__content {
     display: flex;
@@ -62,7 +65,8 @@
     align-items: center;
     justify-content: space-between;
     /* margin-top: 70px; */
-    height: calc(100vh - 64px);
+    height: calc(100vh - 64px);/* 
+    border-bottom: 1px solid lightgrey; */
 }
 .hero__title {
     color: var(--color-black, #2B2B2B);
@@ -81,7 +85,6 @@
     line-height: 24px;
     text-transform: capitalize;
     margin-bottom: 25px;
-    /* width: 424px; */
     width: 650px;
 }
 .hero__btn {
@@ -154,6 +157,7 @@
 }
 .price__card:nth-child(2) {
     position: relative;
+    z-index: -1
 }
 .price__card:nth-child(2) .card__popular {
     font-size: 15px;
@@ -357,3 +361,82 @@
     text-transform: capitalize;
 }
 /* blog style end */
+
+
+/* contact style start */
+.contact__body {
+    display: flex;
+    gap: 20px;
+}
+.contact__left {
+    flex:1;
+    background: var(--White, #FFFFFF);
+    padding: 25px;
+}
+.contact__right {
+    flex:1;
+    background: var(--White, #FFFFFF);
+    padding: 25px;
+}
+.contact__left__title {
+    margin-bottom: 18px;
+}
+.contact__subtitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact__description {
+    color: var(--Paragraph, #767676);
+    font-size: 15px;
+    line-height: 24px;
+    text-transform: capitalize;
+}
+.contact__info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact__item {
+    display: flex;
+    gap: 30px
+}
+.info__title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    text-transform: capitalize;
+}
+.info__name:not(:nth-child(2)) {
+    font-weight: 500;
+    line-height: 22px;
+    text-transform: capitalize;
+}
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact__input {
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    font-size: 17px;
+    padding: 12px 15px;
+}
+.contact__input::placeholder {
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.contact__btn {
+    width: 170px;
+    padding: 14px 0;
+    font-size: 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    background: var(--Yellow, #FFB400);
+    text-align: center;
+    text-transform: capitalize;
+}
+/* contact style end */
