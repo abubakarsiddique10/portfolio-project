@@ -1,5 +1,5 @@
 /* common style start */
-.services__header, .price__header, .testimonial__header, .portfolio__header {
+.services__header, .price__header, .testimonial__header, .portfolio__header, .blog__header {
     text-align: center;
     margin-bottom: 50px;
 }
@@ -303,4 +303,57 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px
 }
+.portfolio__content .portfolio__img {
+   width: 100%;
+   height: auto;
+}
+.portfolio__menu .menu__item--active {
+    color: var(--Yellow, #FFB400);
+}
 /* portfolio style end */
+
+
+/* blog style start */
+.blog__body {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap:20px
+}
+.blog__card {
+    background: var(--White, #FFFFFF);
+}
+.blog__card .card__img {
+    width: 100%;
+    height: auto;
+}
+.blog__body .card__body {
+    padding: 25px;
+}
+.blog__body .card__title {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--Black, #2B2B2B);
+    text-transform: capitalize;
+    line-height: 22px;
+    margin-bottom: 8px;
+}
+.blog__body .card__text {
+    color: var(--Paragraph, #767676);
+    font-size: 15px;
+    line-height: 24px;
+    text-transform: capitalize;
+    margin-bottom: 9px;
+}
+.blog__body .card__action {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.blog__body .card__action {
+    font-size: 18px;
+    color: var(--Yellow, #FFB400);
+    font-weight: 500;
+    line-height: 22px;
+    text-transform: capitalize;
+}
+/* blog style end */
