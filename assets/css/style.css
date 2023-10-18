@@ -75,6 +75,6 @@ button {
     all: unset;
     cursor: pointer;
 }
-section:not(#hero) {
+footer,section:not(#hero) {
     padding-top: 100px;
 }

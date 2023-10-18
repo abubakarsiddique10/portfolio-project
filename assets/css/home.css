@@ -64,9 +64,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* margin-top: 70px; */
-    height: calc(100vh - 64px);/* 
-    border-bottom: 1px solid lightgrey; */
+    height: 100vh;
+    border-bottom: 1px solid lightgrey; 
 }
 .hero__title {
     color: var(--color-black, #2B2B2B);
@@ -85,7 +84,7 @@
     line-height: 24px;
     text-transform: capitalize;
     margin-bottom: 25px;
-    width: 650px;
+    width: 570px;
 }
 .hero__btn {
     display: flex;
@@ -384,7 +383,8 @@
 .contact__subtitle {
     font-size: 20px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
 }
 .contact__description {
     color: var(--Paragraph, #767676);
@@ -395,10 +395,11 @@
 .contact__info {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 .contact__item {
     display: flex;
+    align-items: center;
     gap: 30px
 }
 .info__title {
@@ -415,7 +416,7 @@
 .contact__form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 .contact__input {
     width: 100%;
@@ -433,10 +434,68 @@
     padding: 14px 0;
     font-size: 16px;
     border-radius: 6px;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
-    background: var(--Yellow, #FFB400);
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
     text-align: center;
-    text-transform: capitalize;
+    text-transform: uppercase;
+    color: black;
+}
+.contact__social {
+    margin-top: 20px;
+}
+.social__icon {
+    display: flex;
+    gap: 20px;
+}
+.social__link {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
+    
+}
+
+.social__link:hover svg path {
+    fill: var(--Yellow, #FFB400);
+    transition: all 0.3s ease;
 }
 /* contact style end */
+
+
+/* footer style start */
+footer {
+    margin-bottom: 100px;
+}
+.footer__content {
+    border-top: 1px solid lightgray;
+}
+.footer__header {
+    text-align: center;
+    margin: 50px 0 25px 0;
+}
+.footer__title {
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: capitalize;
+    margin-top: 5px;
+}
+.footer__img {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background: var(--White);
+    border-radius: 100%;
+}
+.footer__description {
+    color: var(--Paragraph, #767676);
+    font-size: 15px;
+    line-height: 24px;
+    text-transform: capitalize;
+    text-align: center;
+}
+/* footer style end */
