@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <!-- HEADER START -->
+    <!-- **************** HEADER CONTENT START **************** -->
     <header id="header">
         <div class="container">
             <nav class="nav">
@@ -20,7 +20,7 @@
                     </div>
                     <ul class="nav__right">
                         <li class="nav__item">
-                            <a class="nav__link" href="#hero">home</a>
+                            <a class="nav__link active__link" href="#hero">home</a>
                         </li>
                         <li class="nav__item">
                             <a class="nav__link" href="#services">services</a>
@@ -41,16 +41,30 @@
                             <a class="nav__link" href="#contact">Contact</a>
                         </li>
                     </ul>
+                    <button id="toggle">
+                        <svg id="toggle__open" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+
+                        <svg id="toggle__close" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                            <path
+                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </button>
                 </div>
             </nav>
         </div>
     </header>
-    <!-- HEADER END -->
-
+    <!-- **************** HEADER CONTENT END **************** -->
 
     <!-- **************** MAIN CONTENT START **************** -->
     <main>
-        <!-- hero area start -->
+
+        <!-- =======================
+        Hero START -->
         <section id="hero">
             <div class="container">
                 <div class="hero">
@@ -76,10 +90,12 @@
                 </div>
             </div>
         </section>
-        <!-- hero area end -->
+        <!-- =======================
+        Hero END -->
 
 
-        <!-- services area start -->
+        <!-- =======================
+        Service START -->
         <section id="services" class="services">
             <div class="container">
                 <header class="services__header">
@@ -135,9 +151,12 @@
                 </div>
             </div>
         </section>
-        <!-- services area end -->
+        <!-- =======================
+        Service END -->
 
-        <!-- TESTIMONIAL AREA START -->
+
+        <!-- =======================
+        Testimonial START -->
         <section id="testimonial" class="testimonial">
             <div class="container">
                 <header class="testimonial__header">
@@ -223,10 +242,12 @@
                 </div>
             </div>
         </section>
-        <!-- TESTIMONIAL AREA END -->
+        <!-- =======================
+        Testimonial END -->
 
 
-        <!-- PORTFOLIO AREA START -->
+        <!-- =======================
+        Portfolio START -->
         <section id="portfolio" class="portfolio">
             <div class="container">
                 <header class="portfolio__header">
@@ -261,10 +282,12 @@
                 </div>
             </div>
         </section>
-        <!-- PORTFOLIO AREA END -->
+        <!-- =======================
+        Portfolio END -->
 
 
-        <!-- price area start -->
+        <!-- =======================
+        Price START -->
         <section id="price" class="price">
             <div class="container">
                 <header class="price__header">
@@ -406,10 +429,12 @@
                     </div>
                 </div>
         </section>
-        <!-- price area end -->
+        <!-- =======================
+        Price END -->
 
 
-        <!-- BLOG AREA START -->
+        <!-- =======================
+        Blog START -->
         <section id="blog" class="blog">
             <div class="container">
                 <header class="blog__header">
@@ -463,10 +488,12 @@
                 </div>
             </div>
         </section>
-        <!-- BLOG AREA END -->
+        <!-- =======================
+        Blog END -->
 
 
-        <!-- CONTACT AREA START -->
+        <!-- =======================
+        Contact START -->
         <section id="contact" class="contact">
             <div class="container">
                 <header class="contact__header">
@@ -506,7 +533,7 @@
                                 </svg>
                                 <div>
                                     <h6 class="info__title">email</h6>
-                                    <span class="info__name">abubakarsiddique@gmail.com</span>
+                                    <span class="info__name">abc@gmail.com</span>
                                 </div>
                             </div>
                             <div class="contact__item">
@@ -620,11 +647,14 @@
                 </div>
             </div>
         </section>
-        <!-- CONTACT AREA END -->
+        <!-- =======================
+        Contact END -->
+
     </main>
     <!-- **************** MAIN CONTENT END **************** -->
 
-    <!-- footer style start -->
+
+    <!-- **************** FOOTER CONTENT START **************** -->
     <footer class="footer">
         <div class="container">
             <div class="footer__content">
@@ -636,7 +666,9 @@
             </div>
         </div>
     </footer>
-    <!-- footer style end -->
+    <!-- **************** FOOTER CONTENT END **************** -->
+
+    <script src="./assets/js/index.js"></script>
 </body>
 
 </html>
