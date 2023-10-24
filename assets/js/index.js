@@ -23,7 +23,6 @@ navRight.addEventListener('click', (event) => {
         toggleClose.style.display = "none"
         navLink.forEach((link) => {
             link.classList.remove('active__link')
-            console.log(link)
             if (event.target.hash == link.hash) {
                 event.target.classList?.add('active__link')
             }
@@ -31,3 +30,31 @@ navRight.addEventListener('click', (event) => {
     }
 })
 
+
+/* portfolio menu start */
+const portfolioMenu = document.querySelector('.portfolio__menu');
+const portfolioItem = document.querySelectorAll('.portfolio__item');
+
+
+/* portfolioMenu.addEventListener('click', (event) => {
+    const selectItem = event.target.innerText;
+    const convertClassName = selectItem.split(' ').join('-').toLowerCase()
+    portfolioItem.forEach((item) => {
+        item.style.display = "block"
+        if (convertClassName != item.classList[1]) {
+            item.style.display = "none"
+        }
+    })
+}) */
+
+portfolioMenu.addEventListener('click', (e) => {
+    const menuId = e.target.id;
+    portfolioItem.forEach((item) => {
+        if (menuId != item.id && menuId != "all-categories") {
+            item.style.display = "none"
+        } else {
+            item.style.display = "block";
+        }
+    })
+})
+/* portfolio menu end */

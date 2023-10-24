@@ -314,15 +314,21 @@
 .portfolio__content {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px
+    gap: 20px;
+    grid-auto-rows: 1fr;
+}
+.portfolio__content .portfolio__item {
+    border: 1px solid red;
 }
 .portfolio__content .portfolio__img {
    width: 100%;
-   height: auto;
+   height: 100%;
+   object-fit: cover;
 }
 .portfolio__menu .menu__item--active {
     color: var(--Yellow, #FFB400);
 }
+
 /* portfolio style end */
 
 
@@ -525,17 +531,17 @@ footer {
     }
     .nav__right {
         width: 100%;
-        height: 50vh;
+        height: 400px;
         position: absolute;
-        top: -50vh;
+        top: 64px;
         left: 0;
         display: flex;
         flex-direction: column;
         gap: 0;
         z-index: -1;
-        padding-top: 64px;
         background: white;
         gap: 10px;
+        display: none;
     }
     .nav__link {
         display: inline-block;
@@ -605,7 +611,7 @@ footer {
 
 
 .nav__show {
-    top: 0;
+    display: block;
     transition: all 0.3s ease;
 }
 #toggle__close {
