@@ -77,3 +77,32 @@ button {
 footer,section:not(#hero) {
     padding-top: 100px;
 }
+
+
+
+
+.practice {
+    margin-bottom: 100px;
+    border: 1px solid red;
+}
+.tab-width {
+ 
+ position: relative;
+}
+.tab__box {
+    border: 1px solid red;
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+    overflow-x: hidden;
+    scroll-behavior:smooth;
+    width: 500px;
+ margin: 0 auto;
+}
+.tab__box .tab {
+    background: #767676;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+

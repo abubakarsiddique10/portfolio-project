@@ -58,3 +58,46 @@ portfolioMenu.addEventListener('click', (e) => {
     })
 })
 /* portfolio menu end */
+
+
+
+/* practice */
+const tabBox = document.querySelector('.portfolio__menu');
+const tab = document.querySelectorAll('.menu__item');
+const leftButton = document.querySelector('.left-arrow');
+const rightButton = document.querySelector('.right-arrow');
+
+
+/* let isDragging = false;
+const dragging = (e) => {
+    if (isDragging) return
+    tabBox.scrollLeft -= e.movementX
+    console.log(tabBox.scrollLeft -= e.movementX)
+}
+
+tabBox.addEventListener('mousedown', () => isDragging = true)
+tabBox.addEventListener('mousemove', dragging) */
+
+let count = 0
+leftButton.addEventListener('click', (e) => {
+    console.log()
+    tabBox.scrollLeft = 100
+    if (count <= 5) {
+        const itemWidth = tab[count].offsetWidth + 10;
+        console.log(tab[count])
+        tabBox.scrollLeft += itemWidth;
+        console.log(count)
+        count++
+    }
+})
+
+rightButton.addEventListener('click', (e) => {
+    if (count >= 1) {
+        count--
+        const itemWidth = tab[count].offsetWidth + 10;
+        tabBox.scrollLeft -= itemWidth;
+        console.log(count)
+    }
+})
+
+
