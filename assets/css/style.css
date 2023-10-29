@@ -50,6 +50,7 @@
 }
 html {
     scroll-behavior: smooth;
+    
 }
 body {
     font-family: 'Inter', sans-serif;
@@ -57,6 +58,9 @@ body {
     font-weight: 400;
     font-style: normal;
     background: var(--color-body);
+}
+.dark {
+    background-color: #18191A;
 }
 .container {
     width: 100%;
