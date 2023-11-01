@@ -1,9 +1,13 @@
 /* nav toggle button select*/
-const toggleBtn = document.querySelector('#toggle');
+const toggleBtn = document.querySelector('#nav__toggle');
 const toggleOpen = document.querySelector('#toggle__open');
 const toggleClose = document.querySelector('#toggle__close');
 const navRight = document.querySelector('.nav__right')
 const navLink = document.querySelectorAll('.nav__link');
+const moon = document.querySelector('.moon');
+const sun = document.querySelector('.sun');
+const html = document.querySelector('html')
+const themeToggle = document.getElementById('theme__toggle')
 
 toggleBtn.addEventListener('click', (event) => {
     if (event.target.id === "toggle__open") {
@@ -29,6 +33,26 @@ navRight.addEventListener('click', (event) => {
         })
     }
 })
+
+// dark & light mood functionality
+if (localStorage.getItem('theme') == 'dark') {
+    html.classList.add('dark');
+    moon.style.display = "none";
+    sun.style.display = "block"
+}
+themeToggle.addEventListener('click', () => {
+    const active = html.classList.toggle('dark');
+    if (active) {
+        localStorage.setItem('theme', 'dark');
+        moon.style.display = "none";
+        sun.style.display = "block";
+    } else {
+        localStorage.setItem('theme', null);
+        moon.style.display = "block";
+        sun.style.display = "none";
+    }
+})
+
 
 
 /* portfolio menu start */
