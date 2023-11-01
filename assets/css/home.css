@@ -4,7 +4,6 @@
     margin-bottom: 50px;
 }
 .header__title {
-    color: var(--color-black-100, #2B2B2B);
     font-size: 32px;
     font-weight: 700;
     line-height: 39.552px;
@@ -13,7 +12,6 @@
 }
 .header__description {
     max-width: 440px;
-    color: var(--color-gray-100, #767676);
     font-size: 15px;
     line-height: 24px;
     text-transform: capitalize;
@@ -43,6 +41,11 @@
 }
 .nav__right {
     display: flex;
+    gap:15px;
+    align-items: center;
+}
+.nav__menu {
+    display: flex;
     gap: 5px
 }
 .nav__link {
@@ -70,8 +73,8 @@
 }
 #theme__toggle, #nav__toggle {
     cursor: pointer;
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
 }
 
 #nav__toggle {
@@ -90,7 +93,7 @@
     height: 100%;
 }
 .toggle button:first-child img {
-    padding: 3px;
+    padding: 5px;
 }
 .sun {
     display: none;
@@ -108,10 +111,9 @@
    justify-content: space-between;
    height: 100vh;
    align-items: center;
-   
 }
 .hero__title {
-    color: var(--color-black-100 #2B2B2B);
+    /* color: var(--color-black-100 #2B2B2B); */
     font-family: Inter;
     font-size: 48px;
     font-weight: 700;
@@ -122,7 +124,7 @@
     color: var(--color-yellow-500, #FFB400);
 }
 .hero__description {
-    color: var(--color-gray-100, #767676);
+    /* color: var(--color-gray-100, #767676); */
     font-weight: 400;
     line-height: 24px;
     text-transform: capitalize;
@@ -160,7 +162,7 @@
     object-fit: cover;
     background: transparent;
     /* box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15); */
-    border: 1px solid rgba(71,85,105,.1);
+    border: 1.5px solid rgba(71,85,105,.1);
     border-radius: 6px;
 }
 /* hero style end */
@@ -179,13 +181,15 @@
     padding: 50px;
     text-align: center;
     /* border: 1px solid rgba(71,85,105,.1); */
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+    /* box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px; */
+    
+    
 }
 .services__card .card__img {
     margin-bottom: 25px;
 }
 .services__card .card__title {
-    color: var(--color-black-100, #2B2B2B);
+    /* color: var(--color-black-100, #2B2B2B); */
     font-size: 18px;
     font-weight: 500;
     line-height: 22px;
@@ -193,7 +197,7 @@
     margin-bottom: 15px;
 }
 .services__card .card__text {
-    color: var(--color-gray-100, #767676);
+    /* color: var(--color-gray-100, #767676); */
     font-size: 15px;
     line-height: 24px;
     text-transform: capitalize;
@@ -250,7 +254,7 @@
 }
 .testimonial__card .client__title {
     font-size: 15px;
-    color: var(--color-gray-100, #767676);
+    /* color: var(--color-gray-100, #767676); */
     line-height: 24px;
     text-transform: capitalize;
 }
@@ -318,7 +322,7 @@
     font-weight: 400;
 }
 .price__card .card__text {
-    color: var(--color-gray-100, #767676);
+    /* color: var(--color-gray-100, #767676); */
     font-size: 15px;
     line-height: 24px;
     text-transform: capitalize;
@@ -332,7 +336,7 @@
     font-size: 15px;
     line-height: 24px;
     text-transform: capitalize;
-    color: var(--color-black-100, #2B2B2B);
+   /*  color: var(--color-black-100, #2B2B2B); */
 }
 .price__card .card__btn {
     border-radius: 30px;
@@ -433,13 +437,13 @@
 .blog__body .card__title {
     font-size: 18px;
     font-weight: 500;
-    color: var(--color-black-100, #2B2B2B);
+    /* color: var(--color-black-100, #2B2B2B); */
     text-transform: capitalize;
     line-height: 22px;
     margin-bottom: 8px;
 }
 .blog__body .card__text {
-    color: var(--color-gray-100, #767676);
+    /* color: var(--color-gray-100, #767676); */
     font-size: 15px;
     line-height: 24px;
     text-transform: capitalize;
@@ -485,7 +489,7 @@
     text-transform: capitalize;
 }
 .contact__description {
-    color: var(--color-gray-100, #767676);
+    /* color: var(--color-gray-100, #767676); */
     font-size: 15px;
     line-height: 24px;
     text-transform: capitalize;
@@ -585,11 +589,14 @@ footer {
     display: inline-block;
     width: 80px;
     height: 80px;
-    background: var(--color-white-100);
+    padding-top: 4px;
+    /* background: var(--color-white-100); */
     border-radius: 100%;
+    object-fit: cover;
+    border: 1px solid rgba(71,85,105,.1);
 }
 .footer__description {
-    color: var(--color-gray-100, #767676);
+    /* color: var(--color-gray-100, #767676); */
     font-size: 15px;
     line-height: 24px;
     text-transform: capitalize;
@@ -610,7 +617,7 @@ footer {
     #nav__toggle {
         display: inline-block;
     }
-    .nav__right {
+    .nav__menu {
         width: 100%;
         height: 300px;
         position: absolute;

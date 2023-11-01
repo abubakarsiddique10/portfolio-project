@@ -41,23 +41,17 @@
 }
 html {
     scroll-behavior: smooth;
-    background: var(--color-white-200);
-    /* background-image: linear-gradient(0deg, rgba(239, 239, 255, 1) 50%, rgba(255, 255, 255, 1) 100%); */
-    /* background-image: radial-gradient(circle farthest-corner at center, rgba(239, 239, 255, 1) 50%, rgba(255, 255, 255, 1) 100%); */
-    
-    /* background-color: #ffffff;background-image: radial-gradient(circle farthest-corner at center, rgba(239, 239, 255, 1) 50%, rgba(255, 255, 255, 1) 100%);background-size: 100%;background-repeat: repeat; */
-    /* background: linear-gradient(180deg,#f8fafc,rgba(242,202,252,.11) 34.69%,rgba(250,198,252,.11) 44.06%,rgba(175,183,255,.11) 54.48%,rgba(142,220,200,.07) 64.9%,#f8fafc 97.95%); */
-
-    background: #FFFFFF;
-/*     background: #F8FAFC; */
-    /* background: linear-gradient(180deg,#f8fafc,rgba(242,202,252,.11) 34.69%,rgba(250,198,252,.11) 44.06%,rgba(175,183,255,.11) 54.48%,rgba(142,220,200,.07) 64.9%,#f8fafc 97.95%); */
-
-    /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% ); */
-
-    /* background: linear-gradient(180deg,#f8fafc,rgba(242,202,252,.11) 34.69%,rgba(250,198,252,.11) 44.06%,rgba(175,183,255,.11) 54.48%,rgba(142,220,200,.07) 64.9%,#f8fafc 97.95%); */
-    background: #F8FAFC
+    /* color: var(--color-gray-100, #767676); */
 }
- 
+.light {
+    background: var(--color-white-200);
+    color: var(--color-black-100, #2B2B2B);
+}
+.dark {
+    background: #1D232A;
+    color: #A6ADBA;
+    /* color: white */
+}
 body {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
@@ -69,10 +63,7 @@ body {
     background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%); */
 
 }
-.dark {
-    background-color: #18191A;
-    /* color: white */
-}
+
 .container {
     width: 100%;
     max-width: 1200px;

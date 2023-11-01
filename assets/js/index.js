@@ -1,13 +1,27 @@
 /* nav toggle button select*/
+const header = document.getElementById('header')
 const toggleBtn = document.querySelector('#nav__toggle');
 const toggleOpen = document.querySelector('#toggle__open');
 const toggleClose = document.querySelector('#toggle__close');
-const navRight = document.querySelector('.nav__right')
+const navRight = document.querySelector('.nav__menu')
+const navLogo = document.querySelector('.nav__logo')
 const navLink = document.querySelectorAll('.nav__link');
 const moon = document.querySelector('.moon');
 const sun = document.querySelector('.sun');
 const html = document.querySelector('html')
-const themeToggle = document.getElementById('theme__toggle')
+const themeToggle = document.getElementById('theme__toggle');
+const headerTitle = document.querySelectorAll('.header__title')
+const isTheme = localStorage.getItem('theme');
+const hero = document.getElementById('hero');
+const servicesCard = document.querySelectorAll('.services__card');
+const testimonialCard = document.querySelectorAll('.testimonial__card');
+const priceCard = document.querySelectorAll('.price__card');
+const blogCard = document.querySelectorAll('.blog__card');
+const contactLeft = document.querySelector('.contact__left');
+const contactRight = document.querySelector('.contact__right');
+
+console.log(priceCard)
+
 
 toggleBtn.addEventListener('click', (event) => {
     if (event.target.id === "toggle__open") {
@@ -24,7 +38,8 @@ navRight.addEventListener('click', (event) => {
     if (event.target.matches('a')) {
         navRight.classList.remove('nav__show');
         toggleOpen.style.display = "block";
-        toggleClose.style.display = "none"
+        toggleClose.style.display = "none";
+
         navLink.forEach((link) => {
             link.classList.remove('active__link')
             if (event.target.hash == link.hash) {
@@ -35,10 +50,16 @@ navRight.addEventListener('click', (event) => {
 })
 
 // dark & light mood functionality
-if (localStorage.getItem('theme') == 'dark') {
+if (isTheme == 'dark') {
     html.classList.add('dark');
     moon.style.display = "none";
     sun.style.display = "block"
+    html.classList.remove('light');
+    [...servicesCard, ...testimonialCard, ...priceCard, ...blogCard, contactLeft, contactRight, hero,].forEach((card) => {
+        card.style.background = "transparent"
+        card.style.border = "1px solid rgba(166, 173, 186, 0.05)"
+    })
+
 }
 themeToggle.addEventListener('click', () => {
     const active = html.classList.toggle('dark');
@@ -46,10 +67,23 @@ themeToggle.addEventListener('click', () => {
         localStorage.setItem('theme', 'dark');
         moon.style.display = "none";
         sun.style.display = "block";
+        html.classList.remove('light');
+        [...servicesCard, ...testimonialCard, ...priceCard, ...blogCard, contactLeft, contactRight, hero,].forEach((card) => {
+            card.style.background = "transparent"
+            card.style.border = "1px solid rgba(166, 173, 186, 0.05)"
+        })
+
     } else {
         localStorage.setItem('theme', null);
         moon.style.display = "block";
         sun.style.display = "none";
+        html.classList.add('light');
+        hero.style.background = "linear-gradient(180deg,#f8fafc,rgba(242,202,252,.11) 34.69%,rgba(250,198,252,.11) 44.06%,rgba(175,183,255,.11) 54.48%,rgba(142,220,200,.07) 64.9%,#f8fafc 97.95%)";
+        [...servicesCard, ...testimonialCard, ...priceCard, ...blogCard, contactLeft, contactRight].forEach((card) => {
+            card.style.background = "unset";
+            card.style.border = "none";
+        })
+
     }
 })
 
@@ -58,18 +92,6 @@ themeToggle.addEventListener('click', () => {
 /* portfolio menu start */
 const portfolioMenu = document.querySelector('.portfolio__menu');
 const portfolioItem = document.querySelectorAll('.portfolio__item');
-
-
-/* portfolioMenu.addEventListener('click', (event) => {
-    const selectItem = event.target.innerText;
-    const convertClassName = selectItem.split(' ').join('-').toLowerCase()
-    portfolioItem.forEach((item) => {
-        item.style.display = "block"
-        if (convertClassName != item.classList[1]) {
-            item.style.display = "none"
-        }
-    })
-}) */
 
 portfolioMenu.addEventListener('click', (e) => {
     const menuId = e.target.id;
