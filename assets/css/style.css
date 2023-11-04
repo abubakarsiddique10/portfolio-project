@@ -44,8 +44,10 @@ html {
     /* color: var(--color-gray-100, #767676); */
 }
 .light {
-    background: var(--color-white-200);
-    color: var(--color-black-100, #2B2B2B);
+   /*  background: var(--color-white-200);
+    color: var(--color-black-100, #2B2B2B); */
+    /* background-color: rgb(249 250 251); */
+    background-color: rgb(255 255 255);
 }
 .dark {
     background: #1D232A;

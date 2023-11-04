@@ -20,7 +20,7 @@ const blogCard = document.querySelectorAll('.blog__card');
 const contactLeft = document.querySelector('.contact__left');
 const contactRight = document.querySelector('.contact__right');
 
-console.log(priceCard)
+
 
 
 toggleBtn.addEventListener('click', (event) => {
@@ -48,19 +48,25 @@ navRight.addEventListener('click', (event) => {
         })
     }
 })
-
 // dark & light mood functionality
 if (isTheme == 'dark') {
     html.classList.add('dark');
     moon.style.display = "none";
     sun.style.display = "block"
     html.classList.remove('light');
-    [...servicesCard, ...testimonialCard, ...priceCard, ...blogCard, contactLeft, contactRight, hero,].forEach((card) => {
-        card.style.background = "transparent"
+    hero.style.background = "#1D232A";
+
+    header.style.background = '#1D232A';
+    navLogo.style.color = "#A6ADBA";
+    navLink.forEach((item) => item.style.color = "#A6ADBA");
+
+    [...servicesCard, ...testimonialCard, ...priceCard, ...blogCard, contactLeft, contactRight].forEach((card) => {
         card.style.border = "1px solid rgba(166, 173, 186, 0.05)"
+        card.style.background = "#242B33";
     })
 
 }
+
 themeToggle.addEventListener('click', () => {
     const active = html.classList.toggle('dark');
     if (active) {
@@ -68,9 +74,14 @@ themeToggle.addEventListener('click', () => {
         moon.style.display = "none";
         sun.style.display = "block";
         html.classList.remove('light');
-        [...servicesCard, ...testimonialCard, ...priceCard, ...blogCard, contactLeft, contactRight, hero,].forEach((card) => {
-            card.style.background = "transparent"
+        hero.style.background = "#1D232A";
+        header.style.background = '#1D232A';
+        navLogo.style.color = "#A6ADBA";
+
+        navLink.forEach((item) => item.style.color = "#A6ADBA");
+        [...servicesCard, ...testimonialCard, ...priceCard, ...blogCard, contactLeft, contactRight].forEach((card) => {
             card.style.border = "1px solid rgba(166, 173, 186, 0.05)"
+            card.style.background = "#242B33";
         })
 
     } else {
@@ -79,11 +90,17 @@ themeToggle.addEventListener('click', () => {
         sun.style.display = "none";
         html.classList.add('light');
         hero.style.background = "linear-gradient(180deg,#f8fafc,rgba(242,202,252,.11) 34.69%,rgba(250,198,252,.11) 44.06%,rgba(175,183,255,.11) 54.48%,rgba(142,220,200,.07) 64.9%,#f8fafc 97.95%)";
-        [...servicesCard, ...testimonialCard, ...priceCard, ...blogCard, contactLeft, contactRight].forEach((card) => {
-            card.style.background = "unset";
-            card.style.border = "none";
-        })
 
+        header.style.background = '#FFFFFF';
+        navLogo.style.color = "#18191A";
+        navLink.forEach((item) => item.style.color = "#18191A");
+
+
+        [...servicesCard, ...testimonialCard, ...priceCard, ...blogCard, contactLeft, contactRight].forEach((card) => {
+            card.style.background = "rgb(248 250 252)";
+            card.style.border = "1px solid rgba(71, 85, 105, .1)";
+            card.style.borderRadius = "4px"
+        })
     }
 })
 
