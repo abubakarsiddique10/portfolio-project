@@ -6,6 +6,7 @@ const toggleClose = document.querySelector('#toggle__close');
 const navRight = document.querySelector('.nav__menu')
 const navLogo = document.querySelector('.nav__logo')
 const navLink = document.querySelectorAll('.nav__link');
+const navMenu = document.querySelector('.nav__menu')
 const moon = document.querySelector('.moon');
 const sun = document.querySelector('.sun');
 const html = document.querySelector('html')
@@ -20,6 +21,22 @@ const blogCard = document.querySelectorAll('.blog__card');
 const contactLeft = document.querySelector('.contact__left');
 const contactRight = document.querySelector('.contact__right');
 
+
+// nav background change function
+const maxWidth = window.matchMedia("(max-width: 992px)");
+const resizeScreen = () => {
+    const width = document.body.clientWidth;
+    const isTheme = localStorage.getItem('theme');
+
+    if (width <= 992 && isTheme == "dark") {
+        navMenu.style.background = "#242B33";
+    } else if (width > 992 && isTheme == "dark") {
+        navMenu.style.background = "transparent";
+    } else {
+        navMenu.style.background = "#FFFFFF";
+    }
+}
+window.addEventListener('resize', resizeScreen)
 
 
 
@@ -58,31 +75,42 @@ if (isTheme == 'dark') {
 
     header.style.background = '#1D232A';
     navLogo.style.color = "#A6ADBA";
-    navLink.forEach((item) => item.style.color = "#A6ADBA");
 
+    navLink.forEach((item) => item.style.color = "#A6ADBA");
     [...servicesCard, ...testimonialCard, ...priceCard, ...blogCard, contactLeft, contactRight].forEach((card) => {
         card.style.border = "1px solid rgba(166, 173, 186, 0.05)"
         card.style.background = "#242B33";
-    })
-
+    });
+    resizeScreen()
 }
 
 themeToggle.addEventListener('click', () => {
     const active = html.classList.toggle('dark');
+
     if (active) {
         localStorage.setItem('theme', 'dark');
         moon.style.display = "none";
         sun.style.display = "block";
         html.classList.remove('light');
         hero.style.background = "#1D232A";
+
         header.style.background = '#1D232A';
         navLogo.style.color = "#A6ADBA";
 
         navLink.forEach((item) => item.style.color = "#A6ADBA");
+
         [...servicesCard, ...testimonialCard, ...priceCard, ...blogCard, contactLeft, contactRight].forEach((card) => {
             card.style.border = "1px solid rgba(166, 173, 186, 0.05)"
             card.style.background = "#242B33";
         })
+
+        resizeScreen()
+
+        /* if (maxWidth.matches) {
+            navMenu.style.background = "#242B33";
+        } else {
+            navMenu.style.background = "#1D232A";
+        } */
 
     } else {
         localStorage.setItem('theme', null);
@@ -100,7 +128,9 @@ themeToggle.addEventListener('click', () => {
             card.style.background = "rgb(248 250 252)";
             card.style.border = "1px solid rgba(71, 85, 105, .1)";
             card.style.borderRadius = "4px"
-        })
+        });
+
+        resizeScreen()
     }
 })
 
@@ -131,16 +161,6 @@ const leftButton = document.querySelector('.left-arrow');
 const rightButton = document.querySelector('.right-arrow');
 
 
-/* let isDragging = false;
-const dragging = (e) => {
-    if (isDragging) return
-    tabBox.scrollLeft -= e.movementX
-    console.log(tabBox.scrollLeft -= e.movementX)
-}
-
-tabBox.addEventListener('mousedown', () => isDragging = true)
-tabBox.addEventListener('mousemove', dragging) */
-
 let count = 0
 leftButton.addEventListener('click', (e) => {
     console.log()
@@ -162,5 +182,9 @@ rightButton.addEventListener('click', (e) => {
         console.log(count)
     }
 })
+
+
+
+
 
 
