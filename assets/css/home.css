@@ -5,7 +5,7 @@ footer,section:not(#hero) {
 }
 .services__header, .price__header, .testimonial__header, .portfolio__header, .blog__header, .contact__header {
     text-align: center;
-    /* margin-bottom: 50px; */
+    margin-bottom: 50px;
 }
 .header__title {
     font-size: 32px;
@@ -24,6 +24,9 @@ footer,section:not(#hero) {
 .active__link {
     background: var(--color-black-100, #2B2B2B);
     color: var(--color-white-100, #FFFFFF) !important;
+}
+svg {
+    color: #2B2B2B
 }
 
 /* common style end */
@@ -569,7 +572,6 @@ footer,section:not(#hero) {
     box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
     text-align: center;
     text-transform: uppercase;
-    color: black;
 }
 .contact__social {
     margin-top: 20px;
@@ -597,9 +599,7 @@ footer,section:not(#hero) {
 
 
 /* footer style start */
-/* footer {
-    margin-bottom: 100px;
-} */
+
 .footer__header {
     text-align: center;
     margin-bottom: 25px;
@@ -615,13 +615,11 @@ footer,section:not(#hero) {
     width: 80px;
     height: 80px;
     padding-top: 4px;
-    /* background: var(--color-white-100); */
     border-radius: 100%;
     object-fit: cover;
     border: 1px solid rgba(71,85,105,.1);
 }
 .footer__description {
-    /* color: var(--color-gray-100, #767676); */
     font-size: 15px;
     line-height: 24px;
     text-transform: capitalize;

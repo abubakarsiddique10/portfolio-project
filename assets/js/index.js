@@ -20,6 +20,7 @@ const priceCard = document.querySelectorAll('.price__card');
 const blogCard = document.querySelectorAll('.blog__card');
 const contactLeft = document.querySelector('.contact__left');
 const contactRight = document.querySelector('.contact__right');
+const svg = document.querySelectorAll('svg')
 
 
 // nav background change function
@@ -74,9 +75,11 @@ if (isTheme == 'dark') {
     hero.style.background = "#1D232A";
 
     header.style.background = '#1D232A';
+    header.style.borderBottom = "1px solid rgba(166, 173, 186, 0.08)";
     navLogo.style.color = "#A6ADBA";
-
     navLink.forEach((item) => item.style.color = "#A6ADBA");
+    svg.forEach((item) => item.style.color = " #A6ADBA");
+
     [...servicesCard, ...testimonialCard, ...priceCard, ...blogCard, contactLeft, contactRight].forEach((card) => {
         card.style.border = "1px solid rgba(166, 173, 186, 0.05)"
         card.style.background = "#242B33";
@@ -95,9 +98,12 @@ themeToggle.addEventListener('click', () => {
         hero.style.background = "#1D232A";
 
         header.style.background = '#1D232A';
+        header.style.borderBottom = "1px solid rgba(166, 173, 186, 0.08)";
         navLogo.style.color = "#A6ADBA";
 
+
         navLink.forEach((item) => item.style.color = "#A6ADBA");
+        svg.forEach((item) => item.style.color = " #A6ADBA");
 
         [...servicesCard, ...testimonialCard, ...priceCard, ...blogCard, contactLeft, contactRight].forEach((card) => {
             card.style.border = "1px solid rgba(166, 173, 186, 0.05)"
@@ -105,12 +111,6 @@ themeToggle.addEventListener('click', () => {
         })
 
         resizeScreen()
-
-        /* if (maxWidth.matches) {
-            navMenu.style.background = "#242B33";
-        } else {
-            navMenu.style.background = "#1D232A";
-        } */
 
     } else {
         localStorage.setItem('theme', null);
@@ -120,9 +120,10 @@ themeToggle.addEventListener('click', () => {
         hero.style.background = "linear-gradient(180deg,#f8fafc,rgba(242,202,252,.11) 34.69%,rgba(250,198,252,.11) 44.06%,rgba(175,183,255,.11) 54.48%,rgba(142,220,200,.07) 64.9%,#f8fafc 97.95%)";
 
         header.style.background = '#FFFFFF';
+        header.style.borderBottom = "none";
         navLogo.style.color = "#18191A";
         navLink.forEach((item) => item.style.color = "#18191A");
-
+        svg.forEach((item) => item.style.color = "#18191A");
 
         [...servicesCard, ...testimonialCard, ...priceCard, ...blogCard, contactLeft, contactRight].forEach((card) => {
             card.style.background = "rgb(248 250 252)";
