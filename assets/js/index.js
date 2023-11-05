@@ -20,7 +20,9 @@ const priceCard = document.querySelectorAll('.price__card');
 const blogCard = document.querySelectorAll('.blog__card');
 const contactLeft = document.querySelector('.contact__left');
 const contactRight = document.querySelector('.contact__right');
-const svg = document.querySelectorAll('svg')
+const svg = document.querySelectorAll('svg');
+const messageInput = document.querySelectorAll('.contact__form input, textarea')
+
 
 
 // nav background change function
@@ -78,7 +80,11 @@ if (isTheme == 'dark') {
     header.style.borderBottom = "1px solid rgba(166, 173, 186, 0.08)";
     navLogo.style.color = "#A6ADBA";
     navLink.forEach((item) => item.style.color = "#A6ADBA");
-    svg.forEach((item) => item.style.color = " #A6ADBA");
+    svg.forEach((item) => item.style.fill = " #A6ADBA");
+    messageInput.forEach((input) => {
+        input.style.background = "#1D232A";
+        input.style.color = "#FFFFFF";
+    });
 
     [...servicesCard, ...testimonialCard, ...priceCard, ...blogCard, contactLeft, contactRight].forEach((card) => {
         card.style.border = "1px solid rgba(166, 173, 186, 0.05)"
@@ -103,7 +109,11 @@ themeToggle.addEventListener('click', () => {
 
 
         navLink.forEach((item) => item.style.color = "#A6ADBA");
-        svg.forEach((item) => item.style.color = " #A6ADBA");
+        svg.forEach((item) => item.style.fill = " #A6ADBA");
+        messageInput.forEach((input) => {
+            input.style.background = "#1D232A";
+            input.style.color = "#FFFFFF";
+        });
 
         [...servicesCard, ...testimonialCard, ...priceCard, ...blogCard, contactLeft, contactRight].forEach((card) => {
             card.style.border = "1px solid rgba(166, 173, 186, 0.05)"
@@ -123,7 +133,11 @@ themeToggle.addEventListener('click', () => {
         header.style.borderBottom = "none";
         navLogo.style.color = "#18191A";
         navLink.forEach((item) => item.style.color = "#18191A");
-        svg.forEach((item) => item.style.color = "#18191A");
+        svg.forEach((item) => item.style.fill = "#18191A");
+        messageInput.forEach((input) => {
+            input.style.background = "#FFFFFF";
+            input.style.color = "black";
+        });
 
         [...servicesCard, ...testimonialCard, ...priceCard, ...blogCard, contactLeft, contactRight].forEach((card) => {
             card.style.background = "rgb(248 250 252)";

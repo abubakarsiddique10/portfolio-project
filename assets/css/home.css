@@ -25,9 +25,11 @@ footer,section:not(#hero) {
     background: var(--color-black-100, #2B2B2B);
     color: var(--color-white-100, #FFFFFF) !important;
 }
-svg {
+/* svg {
     color: #2B2B2B
-}
+} */
+
+
 
 /* common style end */
 
@@ -199,6 +201,9 @@ svg {
     
 }
 .services__card .card__img {
+    width: 68px;
+    height: 68px;
+    fill: #FFB400;
     margin-bottom: 25px;
 }
 .services__card .card__title {
@@ -241,6 +246,7 @@ svg {
     display: flex;
     gap: 10px;
     margin-bottom: 16px;
+    fill: #FFB400
 }
 .testimonial__card .card__title {
     font-size: 18px;
