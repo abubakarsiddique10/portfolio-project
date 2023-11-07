@@ -151,10 +151,20 @@ themeToggle.addEventListener('click', () => {
 
 
 
-/* portfolio menu start */
+/* portfolio start */
 const portfolioMenu = document.querySelector('.portfolio__menu');
 const portfolioItem = document.querySelectorAll('.portfolio__item');
+const arrowIcons = document.querySelectorAll('.portfolio__wrappper img');
 
+// this code for dragging
+portfolioMenu.addEventListener('mousedown', () => isdragging = true)
+portfolioMenu.addEventListener('mouseup', () => isdragging = false)
+portfolioMenu.addEventListener('mousemove', (e) => {
+    if (!isdragging) return
+    portfolioMenu.scrollLeft = portfolioMenu.scrollLeft - e.movementX
+})
+
+// this code for clicking
 portfolioMenu.addEventListener('click', (e) => {
     const menuId = e.target.id;
     portfolioItem.forEach((item) => {
@@ -165,41 +175,31 @@ portfolioMenu.addEventListener('click', (e) => {
         }
     })
 })
+
+arrowIcons.forEach((arrow) => {
+    arrow.addEventListener('click', (e) => {
+        portfolioMenu.style.scrollBehavior = "smooth"
+        const id = e.target.id;
+        portfolioMenu.scrollLeft -= id == "left" ? -50 : 50;
+        portfolioMenu.style.scrollBehavior = "unset"
+    })
+})
 /* portfolio menu end */
 
 
+/* Testimonial start */
 
-/* practice */
-const tabBox = document.querySelector('.portfolio__menu');
-const tab = document.querySelectorAll('.menu__item');
-const leftButton = document.querySelector('.left-arrow');
-const rightButton = document.querySelector('.right-arrow');
+const testimonialBody = document.querySelector('.testimonial__body');
+let isdragging = false;
 
-
-let count = 0
-leftButton.addEventListener('click', (e) => {
-    console.log()
-    tabBox.scrollLeft = 100
-    if (count <= 5) {
-        const itemWidth = tab[count].offsetWidth + 10;
-        console.log(tab[count])
-        tabBox.scrollLeft += itemWidth;
-        console.log(count)
-        count++
-    }
+testimonialBody.addEventListener('mousemove', (e) => {
+    if (!isdragging) return
+    testimonialBody.scrollLeft = testimonialBody.scrollLeft - e.movementX;
 })
+testimonialBody.addEventListener('mousedown', () => isdragging = true)
+testimonialBody.addEventListener('mouseup', () => isdragging = false)
 
-rightButton.addEventListener('click', (e) => {
-    if (count >= 1) {
-        count--
-        const itemWidth = tab[count].offsetWidth + 10;
-        tabBox.scrollLeft -= itemWidth;
-        console.log(count)
-    }
-})
-
-
-
+/* Testimonial end */
 
 
 
