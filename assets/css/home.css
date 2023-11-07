@@ -659,7 +659,10 @@ footer,section:not(#hero) {
     }
     .portfolio__menu {
         max-width: 550px;
-        overflow-x: hidden;
+        overflow-x: scroll;
+    }
+    .portfolio__menu::-webkit-scrollbar{
+        display: none
     }
     .portfolio__menu .menu__item {
         user-select: none;
